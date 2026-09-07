@@ -445,7 +445,8 @@ html.esta-carregando,html.esta-carregando body{overflow:hidden}
 .stage__body{display:grid;grid-template-columns:1fr minmax(0,340px);gap:clamp(32px,6vw,88px);align-items:end}
 .stage__title{
   font-size:clamp(40px,7.4vw,96px);line-height:.96;letter-spacing:-.04em;color:var(--paper);
-  max-width:13ch;margin-bottom:20px;}
+  max-width:13ch;margin-bottom:20px;
+}
 .stage__title .word{display:inline-block;white-space:nowrap}
 .stage__title .char{display:inline-block;opacity:0;transform:translateY(80%);filter:blur(6px)}
 .stage__title.is-in .char{animation:char-in .85s var(--ease) both;animation-delay:calc(var(--c) * 24ms)}
@@ -894,7 +895,8 @@ html.esta-carregando,html.esta-carregando body{overflow:hidden}
             <input id="f-email" name="email" type="email" placeholder="voce@empresa.com.br" autocomplete="email" required>
           </div>
           <div class="field">
-            <label for="f-empresa">Empresa e segmento</label>            <input id="f-empresa" name="empresa" type="text" placeholder="Ex.: Cardo, restaurante">
+            <label for="f-empresa">Empresa e segmento</label>
+            <input id="f-empresa" name="empresa" type="text" placeholder="Ex.: Cardo, restaurante">
           </div>
           <div class="field">
             <label for="f-msg">O que está acontecendo?</label>
@@ -1143,7 +1145,8 @@ html.esta-carregando,html.esta-carregando body{overflow:hidden}
       + '<span class="mono">'+e[0]+'</span>'
       + '<h3 class="step__name">'+e[1]+'</h3>'
       + '<span class="step__when">'+e[2]+'</span>'
-      + '<p class="step__desc">'+e[3]+'</p>'      + '</div>';
+      + '<p class="step__desc">'+e[3]+'</p>'
+      + '</div>';
   }).join("");
 
   /* ---------- faixa correndo ---------- */
@@ -1890,7 +1893,8 @@ html.esta-carregando,html.esta-carregando body{overflow:hidden}
     });
 
     function escrever(i){
-      elTexto.textContent = FALAS[i].frase;      elPapel.textContent = FALAS[i].papel;
+      elTexto.textContent = FALAS[i].frase;
+      elPapel.textContent = FALAS[i].papel;
       pastilhas.forEach(function(b, k){
         b.classList.toggle("is-active", k === i);
         b.setAttribute("aria-selected", k === i ? "true" : "false");
