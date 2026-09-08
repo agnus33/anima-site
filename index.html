@@ -106,6 +106,7 @@ p{margin:0}
 @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 @keyframes drift{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 @keyframes plate-in{from{transform:scale(1.07)}to{transform:scale(1)}}
+
 /* ============================================================
    PRÉ-LOAD
    Ondas concêntricas em WebGL, sem dithering: gradiente contínuo
@@ -202,6 +203,7 @@ html.esta-carregando,html.esta-carregando body{overflow:hidden}
 .drawer.is-open{clip-path:inset(0 0 0 0)}
 .drawer a{font-family:var(--serif);font-size:clamp(34px,10vw,56px);line-height:1.25}
 .drawer a:hover{color:var(--accent-soft)}
+
 /* ---------- hero ---------- */
 .hero{
   position:relative;overflow:hidden;
@@ -1395,7 +1397,8 @@ html.esta-carregando,html.esta-carregando body{overflow:hidden}
     var reduzido = reduce;
     var raf = null, ultimoIndice = 0;
 
-    function fracaoDaSecao(){      if (reduzido) return 1;
+    function fracaoDaSecao(){
+      if (reduzido) return 1;
       var percurso = secao.offsetHeight - window.innerHeight;
       if (percurso <= 40) return 0;
       var r = secao.getBoundingClientRect();
@@ -1644,7 +1647,8 @@ html.esta-carregando,html.esta-carregando body{overflow:hidden}
         if (chunk === "") return;
         if (/^\s+$/.test(chunk)){ frag.appendChild(document.createTextNode(" ")); i++; return; }
         var w = document.createElement("span");
-        w.className = "word";        chunk.split("").forEach(function(ch){
+        w.className = "word";
+        chunk.split("").forEach(function(ch){
           var s = document.createElement("span");
           s.className = "char";
           s.textContent = ch;
